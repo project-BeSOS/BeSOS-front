@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgpusxij04ujx"]
+
+[ext_resource type="Script" uid="uid://ivgqhrwkjgop" path="res://panels/prog_panel.gd" id="1_rwciq"]
+
+[node name="testPanel" type="Control"]
+custom_minimum_size = Vector2(832, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 832.0
+offset_bottom = 64.0
+script = ExtResource("1_rwciq")
+metadata/_custom_type_script = "uid://ivgqhrwkjgop"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 64.0
+color = Color(0.358917, 0.633911, 0.477859, 1)
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 232.0
+offset_bottom = 48.0
+text = "imie ofiary"
+
+[node name="index" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 47.0
+text = "idx:"

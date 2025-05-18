@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://do3gq5nyehx6c"]
+
+[ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_x2wd0"]
+[ext_resource type="Script" uid="uid://85o3x1m3i0og" path="res://views/kierunki_studenta.gd" id="2_00smd"]
+
+[node name="kierunki studenta" instance=ExtResource("1_x2wd0")]
+script = ExtResource("2_00smd")
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0.805973, 0.597506, 0.415107, 1)
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

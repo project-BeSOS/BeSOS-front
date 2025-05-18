@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhdrf3yk0sf3f"]
+
+[ext_resource type="Script" uid="uid://ivgqhrwkjgop" path="res://panels/prog_panel.gd" id="1_h1ff3"]
+[ext_resource type="FontFile" uid="uid://bjlpg1mamava7" path="res://styles/ARIAL.TTF" id="2_qy31x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2wdho"]
+font = ExtResource("2_qy31x")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_qy31x"]
+font = ExtResource("2_qy31x")
+
+[node name="panel kierunki studenta" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 832.0
+offset_bottom = 64.0
+script = ExtResource("1_h1ff3")
+metadata/_custom_type_script = "uid://ivgqhrwkjgop"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 64.0
+color = Color(0.80527, 0.513229, 0.324107, 1)
+
+[node name="nazwa" type="Label" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "nazwa przedmiotu:"
+label_settings = SubResource("LabelSettings_2wdho")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="l3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 640.0
+offset_bottom = 64.0
+text = "obecny semestr:"
+label_settings = SubResource("LabelSettings_2wdho")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="semestr" type="Label" parent="."]
+layout_mode = 0
+offset_left = 648.0
+offset_right = 832.0
+offset_bottom = 64.0
+text = "2"
+label_settings = SubResource("LabelSettings_2wdho")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="l1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 392.0
+offset_bottom = 32.0
+text = "rok rozpoczęcia:"
+label_settings = SubResource("LabelSettings_qy31x")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="rok rozpoczecia" type="Label" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_right = 448.0
+offset_bottom = 32.0
+text = "1939"
+label_settings = SubResource("LabelSettings_qy31x")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="rok zakonczenia" type="Label" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 32.0
+offset_right = 448.0
+offset_bottom = 64.0
+text = "2137"
+label_settings = SubResource("LabelSettings_qy31x")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="l2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 32.0
+offset_right = 392.0
+offset_bottom = 64.0
+text = "rok zakończenia:"
+label_settings = SubResource("LabelSettings_qy31x")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 832, 0, 832, 64, 0, 64, 0, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+begin_cap_mode = 1
+end_cap_mode = 1
+
+[node name="Line2D2" type="Line2D" parent="."]
+points = PackedVector2Array(256, 0, 256, 64)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Line2D3" type="Line2D" parent="."]
+points = PackedVector2Array(448, 0, 448, 64)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
