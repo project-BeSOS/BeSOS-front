@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2qru36crpyn0"]
+[gd_scene load_steps=3 format=3 uid="uid://d2qru36crpyn0"]
 
 [ext_resource type="Script" uid="uid://n3r1lem3nxug" path="res://views/view.gd" id="1_aucv4"]
+[ext_resource type="PackedScene" uid="uid://cbf7i2pg5680m" path="res://ui elements/loading.tscn" id="2_f45ww"]
 
 [node name="test view" type="Control"]
 layout_mode = 3
@@ -36,3 +37,11 @@ offset_bottom = 49.0
 text = "wystąpił błąd:
 "
 autowrap_mode = 2
+
+[node name="loading" parent="." instance=ExtResource("2_f45ww")]
+position = Vector2(448, 256)
+
+[node name="return button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0

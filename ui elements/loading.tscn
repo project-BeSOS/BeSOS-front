@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbf7i2pg5680m"]
+
+[ext_resource type="Texture2D" uid="uid://7geg23shovfw" path="res://ui elements/jp2.jpeg" id="1_1ge3e"]
+[ext_resource type="Script" uid="uid://uudfn7jf6idr" path="res://ui elements/loading.gd" id="1_f1s2d"]
+[ext_resource type="FontFile" uid="uid://bjlpg1mamava7" path="res://styles/ARIAL.TTF" id="2_f1s2d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_psg8m"]
+font = ExtResource("2_f1s2d")
+font_size = 20
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_ec5o6"]
+resource_name = "default"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jp2:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(16, 0), Vector2(0, -32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jp2:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.0872665, 0.0, 0.0872665]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Jp2:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.352617, 0.1875), Vector2(0.5, 0.188), Vector2(0.352617, 0.1875)]
+}
+
+[sub_resource type="Animation" id="Animation_hhk7r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jp2:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Jp2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0872665]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Jp2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.352617, 0.1875)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vwah8"]
+_data = {
+&"RESET": SubResource("Animation_hhk7r"),
+&"default": SubResource("Animation_ec5o6")
+}
+
+[node name="loading" type="Node2D"]
+script = ExtResource("1_f1s2d")
+
+[node name="Jp2" type="Sprite2D" parent="."]
+position = Vector2(0, 7.62939e-06)
+rotation = -0.0872665
+scale = Vector2(0.352617, 0.1875)
+texture = ExtResource("1_1ge3e")
+offset = Vector2(-16, 0)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -128.0
+offset_top = 112.0
+offset_right = 128.0
+offset_bottom = 163.0
+text = "NIE LĘKAJ SIĘ
+STRONA SIĘ ŁADUJE"
+label_settings = SubResource("LabelSettings_psg8m")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vwah8")
+}

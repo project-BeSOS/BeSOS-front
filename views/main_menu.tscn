@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dxnf0evs1o2i3"]
+[gd_scene load_steps=2 format=3 uid="uid://dxnf0evs1o2i3"]
+
+[ext_resource type="Script" uid="uid://cl0utcc752l3r" path="res://views/main_menu.gd" id="1_m2s7d"]
 
 [node name="main menu" type="Control"]
 layout_mode = 3
@@ -8,9 +10,20 @@ anchor_bottom = 1.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m2s7d")
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 544.0
 color = Color(0.782213, 0.790137, 0.569116, 1)
+
+[node name="button_kierunkiStudenta" type="Button" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 192.0
+text = "twoje kierunki"
+
+[connection signal="pressed" from="button_kierunkiStudenta" to="." method="_on_button_kierunki_studenta_pressed"]

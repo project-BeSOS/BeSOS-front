@@ -10,3 +10,4 @@ script = ExtResource("2_00smd")
 color = Color(0.805973, 0.597506, 0.415107, 1)
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]
