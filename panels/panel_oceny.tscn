@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1iqjddy8gem3"]
+
+[ext_resource type="Script" uid="uid://ivgqhrwkjgop" path="res://panels/prog_panel.gd" id="1_lwk8a"]
+[ext_resource type="FontFile" uid="uid://bjlpg1mamava7" path="res://styles/ARIAL.TTF" id="2_ueofo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2wdho"]
+font = ExtResource("2_ueofo")
+font_size = 20
+
+[node name="panel oceny" type="Control"]
+custom_minimum_size = Vector2(832, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 832.0
+offset_bottom = 64.0
+script = ExtResource("1_lwk8a")
+metadata/_custom_type_script = "uid://ivgqhrwkjgop"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 64.0
+color = Color(0.724398, 0.0645957, 0.558806, 1)
+
+[node name="nazwa" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 408.0
+offset_bottom = 64.0
+text = "nazwa przedmiotu:"
+label_settings = SubResource("LabelSettings_2wdho")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ocena" type="Label" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_right = 504.0
+offset_bottom = 64.0
+text = "ocena"
+label_settings = SubResource("LabelSettings_2wdho")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="data" type="Label" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_right = 832.0
+offset_bottom = 64.0
+text = "Sat, 01 Jun 2024 00:00:00 GMT"
+label_settings = SubResource("LabelSettings_2wdho")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="opiekun" type="Label" parent="."]
+layout_mode = 0
+offset_right = 152.0
+offset_bottom = 64.0
+text = "nazwa przedmiotu:"
+label_settings = SubResource("LabelSettings_2wdho")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 832, 0, 832, 64, 0, 64, 0, 0)
+width = 1.0
+begin_cap_mode = 1
+end_cap_mode = 1
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(-40, 0)
+points = PackedVector2Array(192, 0, 192, 34.2403, 192, 64)
+width = 1.0
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(216, 0)
+points = PackedVector2Array(192, 0, 192, 34.2403, 192, 64)
+width = 1.0
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(312, 0)
+points = PackedVector2Array(192, 0, 192, 34.2403, 192, 64)
+width = 1.0

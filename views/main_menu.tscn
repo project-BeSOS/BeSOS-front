@@ -26,4 +26,13 @@ offset_right = 192.0
 offset_bottom = 192.0
 text = "twoje kierunki"
 
+[node name="button_oceny" type="Button" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 64.0
+offset_right = 336.0
+offset_bottom = 192.0
+text = "twoje oceny"
+
 [connection signal="pressed" from="button_kierunkiStudenta" to="." method="_on_button_kierunki_studenta_pressed"]
+[connection signal="pressed" from="button_oceny" to="." method="_on_button_oceny_pressed"]

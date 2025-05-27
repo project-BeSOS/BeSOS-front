@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://4nq7dec4fonw"]
+
+[ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_tl4ri"]
+[ext_resource type="Script" uid="uid://di48p4rnft388" path="res://views/oceny.gd" id="2_tt2ui"]
+
+[node name="oceny" instance=ExtResource("1_tl4ri")]
+script = ExtResource("2_tt2ui")
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0.696594, 0.144743, 0.623387, 1)
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]

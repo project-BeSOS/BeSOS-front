@@ -11,6 +11,7 @@ font_size = 20
 font = ExtResource("2_qy31x")
 
 [node name="panel kierunki studenta" type="Control"]
+custom_minimum_size = Vector2(832, 64)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 832.0
