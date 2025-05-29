@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1k4pyh5eoapf"]
+
+[ext_resource type="Script" uid="uid://ivgqhrwkjgop" path="res://panels/prog_panel.gd" id="1_qhoo1"]
+[ext_resource type="FontFile" uid="uid://bjlpg1mamava7" path="res://styles/ARIAL.TTF" id="2_c6k3b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k7h5l"]
+font = ExtResource("2_c6k3b")
+font_size = 20
+
+[node name="panel_zaliczenia" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 832.0
+offset_bottom = 96.0
+script = ExtResource("1_qhoo1")
+metadata/_custom_type_script = "uid://ivgqhrwkjgop"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 96.0
+color = Color(8.18223e-07, 0.368419, 0.572166, 1)
+
+[node name="nazwa" type="Label" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 512.0
+offset_bottom = 64.0
+text = "nazwa przedmiotu:"
+label_settings = SubResource("LabelSettings_k7h5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="sala" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 832.0
+offset_bottom = 96.0
+text = "sala"
+label_settings = SubResource("LabelSettings_k7h5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="label1" type="Label" parent="."]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 96.0
+text = "ects:"
+label_settings = SubResource("LabelSettings_k7h5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ects" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 96.0
+text = "ects:"
+label_settings = SubResource("LabelSettings_k7h5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="data" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_right = 832.0
+offset_bottom = 64.0
+text = "Sat, 15 Jun 2024 00:00:00 GMT"
+label_settings = SubResource("LabelSettings_k7h5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="opiekun" type="Label" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "opiekun przedmiotu"
+label_settings = SubResource("LabelSettings_k7h5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 832, 0, 832, 96, 0, 96, 0, 0)
+width = 1.0
+begin_cap_mode = 1
+
+[node name="Line2D2" type="Line2D" parent="."]
+points = PackedVector2Array(0, 64, 832, 64)
+width = 1.0
+
+[node name="Line2D3" type="Line2D" parent="."]
+points = PackedVector2Array(256, 64, 256, 0)
+width = 1.0
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(256, 0)
+points = PackedVector2Array(256, 64, 256, 0)
+width = 1.0

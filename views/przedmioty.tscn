@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://0hls2ljwd3d2"]
+
+[ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_vjn1d"]
+[ext_resource type="PackedScene" uid="uid://bh8lb7mrmru8c" path="res://panels/panel_przedmioty.tscn" id="2_01bhd"]
+
+[node name="przedmioty" instance=ExtResource("1_vjn1d")]
+endpoint = "przedmioty"
+defaultPanel = ExtResource("2_01bhd")
+translationTable = Dictionary[String, String]({
+"ects": "ects",
+"nazwa": "nazwa",
+"opiekun": "prowadzacy",
+"sala": "sala"
+})
+responseArrayName = "przedmioty"
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0.698055, 1.7303e-05, 0.0519667, 1)

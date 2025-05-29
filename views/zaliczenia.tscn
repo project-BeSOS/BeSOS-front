@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bduy2w3ice231"]
+
+[ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_skku4"]
+
+[node name="zaliczenia" instance=ExtResource("1_skku4")]
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0, 0.295818, 0.498936, 1)

@@ -34,5 +34,25 @@ offset_right = 336.0
 offset_bottom = 192.0
 text = "twoje oceny"
 
+[node name="button_zaliczenia" type="Button" parent="."]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 64.0
+offset_right = 480.0
+offset_bottom = 192.0
+text = "twoje zaliczenia"
+autowrap_mode = 2
+
+[node name="button_przedmioty" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 64.0
+offset_right = 624.0
+offset_bottom = 192.0
+text = "twoje przedmioty"
+autowrap_mode = 2
+
 [connection signal="pressed" from="button_kierunkiStudenta" to="." method="_on_button_kierunki_studenta_pressed"]
 [connection signal="pressed" from="button_oceny" to="." method="_on_button_oceny_pressed"]
+[connection signal="pressed" from="button_zaliczenia" to="." method="_on_button_zaliczenia_pressed"]
+[connection signal="pressed" from="button_przedmioty" to="." method="_on_button_przedmioty_pressed"]
