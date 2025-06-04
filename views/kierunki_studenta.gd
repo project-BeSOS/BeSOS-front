@@ -36,9 +36,9 @@ func _on_http_request_request_completed(_result, _response_code, _headers, body)
 	for k:Dictionary in response["kierunki"]:
 		var newPanel:progPanel = panel.instantiate()
 		newPanel.set_label_text("nazwa", str(k.get("nazwa")))
-		newPanel.set_label_text("semestr", str(int(k.get("obecny_semestr"))))
-		newPanel.set_label_text("rok rozpoczecia", str(int(k.get("rok_rozpoczecia"))))
-		newPanel.set_label_text("rok zakonczenia", str(int(k.get("rok_ukonczenia"))))
+		newPanel.set_label_text("semestr", str(int(str(k.get("obecny_semestr")))))
+		newPanel.set_label_text("rok rozpoczecia", str(int(str(k.get("rok_rozpoczecia")))))
+		newPanel.set_label_text("rok zakonczenia", str(int(str(k.get("rok_ukonczenia")))))
 		container.add_child(newPanel)
 
 

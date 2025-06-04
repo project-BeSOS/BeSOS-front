@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://wctsqgfl4mlt"]
+
+[ext_resource type="Script" uid="uid://cwtvvpsmur10f" path="res://panels/panel_lista_studentow.gd" id="1_rv3wc"]
+[ext_resource type="FontFile" uid="uid://bjlpg1mamava7" path="res://styles/ARIAL.TTF" id="2_m1bob"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7tqsi"]
+font = ExtResource("2_m1bob")
+font_size = 20
+
+[node name="panelListaStudentow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 384.0
+offset_bottom = 128.0
+script = ExtResource("1_rv3wc")
+metadata/_custom_type_script = "uid://ivgqhrwkjgop"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 224.0
+offset_right = 608.0
+offset_bottom = 128.0
+color = Color(0, 0, 0, 1)
+
+[node name="imie" type="Label" parent="."]
+offset_left = 224.0
+offset_right = 416.0
+offset_bottom = 64.0
+text = "imie studenta"
+label_settings = SubResource("LabelSettings_7tqsi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="nazwisko" type="Label" parent="."]
+offset_left = 416.0
+offset_right = 608.0
+offset_bottom = 64.0
+text = "nazwisko studenta"
+label_settings = SubResource("LabelSettings_7tqsi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="index" type="Label" parent="."]
+offset_left = 224.0
+offset_top = 64.0
+offset_right = 416.0
+offset_bottom = 128.0
+text = "indeks"
+label_settings = SubResource("LabelSettings_7tqsi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 832.0
+offset_bottom = 128.0
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

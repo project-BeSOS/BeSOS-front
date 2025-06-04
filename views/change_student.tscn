@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://twrslqycefw2"]
+
+[ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_d5g83"]
+[ext_resource type="Script" uid="uid://caucvwrxcf24d" path="res://views/change_student.gd" id="2_d5g83"]
+[ext_resource type="PackedScene" uid="uid://wctsqgfl4mlt" path="res://panels/panel_lista_studentow.tscn" id="3_d25rp"]
+
+[node name="change student" instance=ExtResource("1_d5g83")]
+script = ExtResource("2_d5g83")
+endpoint = "studenci"
+defaultPanel = ExtResource("3_d25rp")
+translationTable = Dictionary[String, String]({
+"imie": "imie",
+"index": "nazwa",
+"nazwisko": "nazwisko"
+})
+responseArrayName = "studenci"
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0.205117, 0.205117, 0.205117, 1)

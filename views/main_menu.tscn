@@ -52,7 +52,24 @@ offset_bottom = 192.0
 text = "twoje przedmioty"
 autowrap_mode = 2
 
+[node name="button_change_student" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_right = 960.0
+offset_bottom = 40.0
+text = "zmien studenta"
+
+[node name="currentStudentId" type="Label" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 40.0
+offset_right = 961.0
+offset_bottom = 63.0
+text = "student 2138659"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="button_kierunkiStudenta" to="." method="_on_button_kierunki_studenta_pressed"]
 [connection signal="pressed" from="button_oceny" to="." method="_on_button_oceny_pressed"]
 [connection signal="pressed" from="button_zaliczenia" to="." method="_on_button_zaliczenia_pressed"]
 [connection signal="pressed" from="button_przedmioty" to="." method="_on_button_przedmioty_pressed"]
+[connection signal="pressed" from="button_change_student" to="." method="_on_button_change_student_pressed"]
