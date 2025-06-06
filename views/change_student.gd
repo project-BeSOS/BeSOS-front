@@ -27,7 +27,7 @@ func _ready():
 			defaultExit.pressed.connect(default_exit)
 		
 		
-		await get_tree().create_timer(1).timeout
+		#await get_tree().create_timer(1).timeout
 		#request
 		defaultRequest.request_completed.connect(default_request_callback)
 		defaultRequest.request(Globals.backend_url+"/students/", [], HTTPClient.METHOD_GET)
@@ -40,9 +40,10 @@ func default_request_callback(_result, _response_code, _headers, body):
 	var json = JSON.new()
 	var err = json.parse(body.get_string_from_utf8())
 	#error proofing i guess
-	if err == null:
-		await get_tree().create_timer(1).timeout
-		defaultRequest.request(Globals.backend_url+"/student/"+str(Globals.idStudenta)+"/"+endpoint, [], HTTPClient.METHOD_GET)
+	if err != OK:
+		defaultErrorLabel.show()
+		defaultErrorLabel.text += str("internal server error. spróbuj przeładować stronę")
+		#defaultRequest.request(Globals.backend_url+"/student/"+str(Globals.idStudenta)+"/"+endpoint, [], HTTPClient.METHOD_GET)
 		print("error, ponowne wysylanie zapytania")
 		return
 	var response:Dictionary = json.get_data()

@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bduy2w3ice231"]
+[gd_scene load_steps=3 format=3 uid="uid://bduy2w3ice231"]
 
 [ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_skku4"]
+[ext_resource type="Texture2D" uid="uid://dy2mswfebcwjc" path="res://ui elements/bg zaliczenia.webp" id="2_i6cvg"]
 
 [node name="zaliczenia" instance=ExtResource("1_skku4")]
 
 [node name="ColorRect" parent="." index="0"]
 color = Color(0, 0.295818, 0.498936, 1)
+
+[node name="BgZaliczenia" type="Sprite2D" parent="." index="1"]
+scale = Vector2(0.625, 0.53125)
+texture = ExtResource("2_i6cvg")
+centered = false

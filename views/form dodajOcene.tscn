@@ -1,0 +1,121 @@
+[gd_scene load_steps=4 format=3 uid="uid://hf5gsbjnbvit"]
+
+[ext_resource type="Script" uid="uid://c5dola4kcw8sq" path="res://views/test_form.gd" id="1_8am0m"]
+[ext_resource type="Script" uid="uid://g8w6yo8oy3l7" path="res://ui elements/input.gd" id="1_fn803"]
+[ext_resource type="Texture2D" uid="uid://ccbf272evltq" path="res://ui elements/bg oceny.webp" id="1_n85p6"]
+
+[node name="form dodajOcene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8am0m")
+
+[node name="BgOceny" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 0)
+scale = Vector2(0.625, 0.53125)
+texture = ExtResource("1_n85p6")
+centered = false
+
+[node name="return button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+text = "powrót"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 96.0
+offset_right = 344.0
+offset_bottom = 288.0
+color = Color(1, 1, 1, 0.380392)
+
+[node name="studentId" type="LineEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 32.0
+offset_right = 272.0
+offset_bottom = 63.0
+script = ExtResource("1_fn803")
+type = 0
+metadata/_custom_type_script = "uid://g8w6yo8oy3l7"
+
+[node name="subjectId" type="LineEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 72.0
+offset_right = 272.0
+offset_bottom = 103.0
+script = ExtResource("1_fn803")
+type = 0
+metadata/_custom_type_script = "uid://g8w6yo8oy3l7"
+
+[node name="grade" type="LineEdit" parent="ColorRect"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 112.0
+offset_right = 272.0
+offset_bottom = 143.0
+script = ExtResource("1_fn803")
+type = 2
+metadata/_custom_type_script = "uid://g8w6yo8oy3l7"
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 96.0
+offset_bottom = 64.0
+text = "id studenta"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 117.0
+offset_bottom = 104.0
+text = "id przedmiotu"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 112.0
+offset_right = 117.0
+offset_bottom = 144.0
+text = "ocena"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 24.0
+text = "wystaw ocenę"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="confirm button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 152.0
+offset_right = 272.0
+offset_bottom = 184.0
+text = "zatwierdź"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="return message" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 896.0
+offset_bottom = 320.0
+autowrap_mode = 2
+
+[connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="ColorRect/confirm button" to="." method="_on_confirm_button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

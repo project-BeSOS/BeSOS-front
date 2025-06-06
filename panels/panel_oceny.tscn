@@ -20,7 +20,7 @@ metadata/_custom_type_script = "uid://ivgqhrwkjgop"
 layout_mode = 0
 offset_right = 832.0
 offset_bottom = 64.0
-color = Color(0.724398, 0.0645957, 0.558806, 1)
+color = Color(1, 1, 1, 0.27451)
 
 [node name="nazwa" type="Label" parent="."]
 layout_mode = 0

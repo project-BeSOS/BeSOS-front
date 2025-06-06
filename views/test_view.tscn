@@ -42,10 +42,12 @@ layout_mode = 2
 [node name="errorLabel" type="Label" parent="."]
 visible = false
 layout_mode = 0
+offset_top = 448.0
 offset_right = 960.0
-offset_bottom = 49.0
+offset_bottom = 497.0
 text = "wystąpił błąd:
 "
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="loading" parent="." instance=ExtResource("2_f45ww")]

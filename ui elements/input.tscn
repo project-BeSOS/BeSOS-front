@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7b5dh5lwea34"]
+
+[ext_resource type="Script" uid="uid://g8w6yo8oy3l7" path="res://ui elements/input.gd" id="1_4bd3v"]
+
+[node name="input" type="LineEdit"]
+offset_right = 192.0
+offset_bottom = 40.0
+placeholder_text = "placeholder"
+caret_blink = true
+script = ExtResource("1_4bd3v")

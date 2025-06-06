@@ -17,3 +17,8 @@ responseArrayName = "studenci"
 
 [node name="ColorRect" parent="." index="0"]
 color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[node name="errorLabel" parent="." index="3"]
+offset_top = 448.0
+offset_bottom = 497.0
+horizontal_alignment = 1

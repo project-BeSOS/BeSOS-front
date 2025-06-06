@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2qru36crpyn0"]
+
+[ext_resource type="Script" uid="uid://n3r1lem3nxug" path="res://views/view.gd" id="1_aucv4"]
+[ext_resource type="PackedScene" uid="uid://cbf7i2pg5680m" path="res://ui elements/loading.tscn" id="2_f45ww"]
+[ext_resource type="PackedScene" uid="uid://d1k4pyh5eoapf" path="res://panels/panel_zaliczenia.tscn" id="2_sweeg"]
+
+[node name="test view" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 960.0
+offset_bottom = 544.0
+script = ExtResource("1_aucv4")
+endpoint = "zaliczenia"
+defaultPanel = ExtResource("2_sweeg")
+translationTable = Dictionary[String, String]({
+"ects": "ECTS",
+"nazwa": "nazwa",
+"opiekun": "opiekun przedmiotu",
+"sala": "sala"
+})
+responseArrayName = "zaliczenia"
+metadata/_custom_type_script = "uid://n3r1lem3nxug"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 544.0
+color = Color(0.426149, 0.720925, 0.552128, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 896.0
+offset_bottom = 448.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="errorLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 448.0
+offset_right = 960.0
+offset_bottom = 497.0
+text = "wystąpił błąd:
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="loading" parent="." instance=ExtResource("2_f45ww")]
+position = Vector2(448, 256)
+
+[node name="return button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+text = "powrót"

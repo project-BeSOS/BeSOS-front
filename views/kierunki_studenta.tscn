@@ -1,13 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://do3gq5nyehx6c"]
+[gd_scene load_steps=4 format=3 uid="uid://do3gq5nyehx6c"]
 
 [ext_resource type="PackedScene" uid="uid://d2qru36crpyn0" path="res://views/test_view.tscn" id="1_x2wd0"]
-[ext_resource type="Script" uid="uid://85o3x1m3i0og" path="res://views/kierunki_studenta.gd" id="2_00smd"]
+[ext_resource type="PackedScene" uid="uid://bhdrf3yk0sf3f" path="res://panels/panel_kierunki_studenta.tscn" id="2_00smd"]
+[ext_resource type="Texture2D" uid="uid://dsuidd3ty13s0" path="res://ui elements/bg kierunki.webp" id="3_6j8go"]
 
 [node name="kierunki studenta" instance=ExtResource("1_x2wd0")]
-script = ExtResource("2_00smd")
+endpoint = "kierunki"
+defaultPanel = ExtResource("2_00smd")
+translationTable = Dictionary[String, String]({
+"nazwa": "nazwa",
+"rok rozpoczecia": "rok_rozpoczecia",
+"rok zakonczenia": "rok_ukonczenia",
+"semestr": "obecny_semestr"
+})
+responseArrayName = "kierunki"
 
 [node name="ColorRect" parent="." index="0"]
 color = Color(0.805973, 0.597506, 0.415107, 1)
+
+[node name="BgKierunki" type="Sprite2D" parent="." index="1"]
+position = Vector2(480, 272)
+scale = Vector2(0.625, 0.53125)
+texture = ExtResource("3_6j8go")
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="pressed" from="return button" to="." method="_on_return_button_pressed"]
